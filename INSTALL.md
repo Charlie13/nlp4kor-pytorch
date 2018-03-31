@@ -14,8 +14,7 @@ git lfs install
 
 ### install source codes
 - anaconda3 설치 https://www.continuum.io/downloads
-- `pip install tensorflow-gpu`
-    - 또는 `pip install tensorflow-cpu`
+- `pip install torch`
 - git clone 실행하는 디렉토리는 `~/workspace` 입니다.
 - 원할한 소스 실행을 위해서는 환경변수 PYTHONPATH 에 `~/workspace/nlp4kor` 를 추가하셔야 합니다.
     - `export PYTHONPATH=~/workspace/nlp4kor:$PYTHONPATH`
@@ -23,17 +22,16 @@ git lfs install
 ```shell
 mkdir ~/workspae
 cd ~/workspace
+
 git clone https://github.com/bage79/nlp4kor.git
-git clone https://github.com/bage79/nlp4kor-tensorflow.git
-cd ~/workspace/nlp4kor
-pip install -r requirements.txt
-cd ~/workspace/nlp4kor-tensorflow
-pip install -r requirements.txt
+pip install -r ~/workspace/nlp4kor/requirements.txt
+
+git clone https://github.com/bage79/nlp4kor-pytorch.git
+pip install -r ~/workspace/nlp4kor-pytorch/requirements.txt
 ```
 
 ### download datasets
 ```shell
 cd ~/workspace
-git clone https://gitlab.com/bage79/nlp4kor-mnist.git
 git clone https://gitlab.com/bage79/nlp4kor-ko.wikipedia.org.git
 ```
