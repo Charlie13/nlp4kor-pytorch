@@ -1,6 +1,20 @@
-### summary
-- 소스와 데이터 repository 는 각각 분리되어 있습니다.
-- 데이터 repository는 git lfs를 사용하여, 설치가 필요합니다. 
+# nlp4kor (pytorch)
+### Environment
+    - 서버: Ubuntu 16.04 + Anaconda3 4.5 + Python 3.6 + Pytorch 0.3
+    - 로컬: OSX 10.12 + Anaconda3 4.5 + Python 3.6 + Pytorch 0.3
+
+### Prerequisite
+- python3.6 (https://www.anaconda.com/download/)
+- tensorflow==1.5.0 (https://www.tensorflow.org/install/)
+- tensorflow-tensorboard==1.5.1 (https://www.tensorflow.org/install/)
+- torch==0.3.0.post4 (http://pytorch.org)
+```shell
+pip install --upgrade tensorflow==1.5.0
+pip install --upgrade tensorflow-tensorboard==1.5.1
+pip install --upgrade torch==0.3.0.post4
+```
+
+### install git & git lfs
     - https://github.com/git-lfs/git-lfs/wiki/Installation
     - SourceTree 등의 tool을 이용하시면, git lfs 파일의 clone이 쉽습니다.
 ```shell
@@ -8,15 +22,9 @@
 brew install git git-lfs
 git lfs install
 ```
-- 개발 환경
-    - 서버: Ubuntu 16.04 + Anaconda3 4.5 + Python 3.6 + Pytorch 0.3
-    - 로컬: OSX 10.12 + Anaconda3 4.5 + Python 3.6 + Pytorch 0.3
 
-### install source codes
-- anaconda3 설치 https://www.continuum.io/downloads
-- `pip install torch`
-- git clone 실행하는 디렉토리는 `~/workspace` 입니다.
-- 원할한 소스 실행을 위해서는 환경변수 PYTHONPATH 에 `~/workspace/nlp4kor` 를 추가하셔야 합니다.
+### install this source codes
+- 환경변수 PYTHONPATH 에 `~/workspace/nlp4kor` 를 추가하시는 것이 좋습니다.
     - `export PYTHONPATH=~/workspace/nlp4kor:$PYTHONPATH`
     - ~/.bash_profile 또는 ~/.profile 에 한 줄을 추가해 주세요.
 ```shell
@@ -30,8 +38,3 @@ git clone https://github.com/bage79/nlp4kor-pytorch.git
 pip install -r ~/workspace/nlp4kor-pytorch/requirements.txt
 ```
 
-### download datasets
-```shell
-cd ~/workspace
-git clone https://gitlab.com/bage79/nlp4kor-ko.wikipedia.org.git
-```
