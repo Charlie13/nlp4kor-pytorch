@@ -3,7 +3,9 @@
 https://github.com/bage79/nlp4kor
 
 # nlp4kor (pytorch)
-### corpus/: 학습 말뭉치
-### nlp4kor_pytorch/
-- `word2vec/`:
+### `corpus/`
+- `ko.wikipedia.org.sentences`: 한글 위키피디아 말뭉치
+
+### `nlp4kor_pytorch/`
+- `word2vec/`
     - `word2vec_embedding_test.py`: word2vec embedding 응용
