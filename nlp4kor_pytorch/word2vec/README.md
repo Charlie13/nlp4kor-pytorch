@@ -2,18 +2,25 @@
 ```shell
 ./word2vec_vocab.sh
 ```
-- default vocab size: 100,000
-- default min count: 2
+- vocab size: 100,000
+- min count: 2
 
 ### Create a corpus
 ```shell
 ./word2vec_corpus.sh
 ```
+- window size: 1
 
 ### Create a word2vec embedding
 ```shell
 ./word2vec_trainer.sh
 ```
+- batch size: 500
+- epoch: 40
+- subsample rate: 1e-5
+- negative samples: 20
+- embedding size: 300
+- optimizer & learning rate: Adam, 1e-3
 
 ### Use the word2vec embedding
 ```shell
