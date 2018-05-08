@@ -31,19 +31,19 @@ TENSORBOARD_LOG_DIR = os.path.join(os.getenv("HOME"), 'tensorboard_log')
 if not os.path.exists(TENSORBOARD_LOG_DIR):
     os.makedirs(TENSORBOARD_LOG_DIR)
 
-CORPUS_DIR = os.path.join(os.getenv('HOME'), 'workspace', 'nlp4kor-pytorch', 'corpus')
-if not os.path.exists(CORPUS_DIR):
-    os.makedirs(CORPUS_DIR)
-
-WIKIPEDIA_SENTENCE_FILE = os.path.join(CORPUS_DIR, 'ko.wikipedia.org.sentences')
-SAMPLE_WIKIPEDIA_SENTENCE_FILE = os.path.join(CORPUS_DIR, 'sample.ko.wikipedia.org.sentences')
-
 #################################################
-# Word2Vec
+# nlp4kor-ko.wikipedia.org
 #################################################
-WORD2VEC_DIR = os.path.join(os.getenv('HOME'), 'workspace', 'nlp4kor-pytorch', 'nlp4kor_pytorch', 'word2vec')
-WORD2VEC_DATA_DIR = os.path.join(WORD2VEC_DIR, 'data')
-if not os.path.exists(WORD2VEC_DATA_DIR):
-    os.makedirs(WORD2VEC_DATA_DIR)
+WIKIPEDIA_DIR = os.path.join(os.getenv('HOME'), 'workspace', 'nlp4kor-ko.wikipedia.org')
+WIKIPEDIA_CORPUS_DIR = os.path.join(WIKIPEDIA_DIR, 'corpus')
+if not os.path.exists(WIKIPEDIA_CORPUS_DIR):
+    os.makedirs(WIKIPEDIA_CORPUS_DIR)
 
-WORD2VEC_EMBEDDING_FILE = os.path.join(WORD2VEC_DATA_DIR, 'ko.wikipedia.org.sentences.token_word.vocab_1e+05.vocab.window_1.side_both.corpus.embed_300.batch_500.neg_20.subsample_1e-05.lr_1e-03.decay_0.0.epoch_40.embedding')
+WIKIPEDIA_SENTENCE_FILE = os.path.join(WIKIPEDIA_CORPUS_DIR, 'ko.wikipedia.org.sentences')
+SAMPLE_WIKIPEDIA_SENTENCE_FILE = os.path.join(WIKIPEDIA_CORPUS_DIR, 'sample.ko.wikipedia.org.sentences')
+
+WIKIPEDIA_DATA_DIR = os.path.join(WIKIPEDIA_DIR, 'data')
+if not os.path.exists(WIKIPEDIA_DATA_DIR):
+    os.makedirs(WIKIPEDIA_DATA_DIR)
+
+WORD2VEC_EMBEDDING_FILE = os.path.join(WIKIPEDIA_DATA_DIR, 'ko.wikipedia.org.sentences.token_word.vocab_1e+05.vocab.window_1.side_both.corpus.embed_300.batch_500.neg_20.subsample_1e-05.lr_1e-03.decay_0.0.epoch_40.embedding')
