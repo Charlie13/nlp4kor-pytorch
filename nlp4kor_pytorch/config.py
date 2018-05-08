@@ -31,7 +31,7 @@ TENSORBOARD_LOG_DIR = os.path.join(os.getenv("HOME"), 'tensorboard_log')
 if not os.path.exists(TENSORBOARD_LOG_DIR):
     os.makedirs(TENSORBOARD_LOG_DIR)
 
-CORPUS_DIR = os.path.join(os.getenv('HOME'), 'workspace', 'nlp4kor-pytorch', 'nlp4kor_pytorch', 'corpus')
+CORPUS_DIR = os.path.join(os.getenv('HOME'), 'workspace', 'nlp4kor-pytorch', 'corpus')
 if not os.path.exists(CORPUS_DIR):
     os.makedirs(CORPUS_DIR)
 
